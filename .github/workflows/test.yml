@@ -32,8 +32,6 @@ jobs:
       - name: Running action   
         uses: ruchika-jain/package-action@1.0.1
         id: publish-action
-        with:
-          package-name: 'hello-gh-js-action'
 
       - name: Signing action
         uses: ruchika-jain/sign-package@1.0.1
