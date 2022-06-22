@@ -15,7 +15,7 @@ jobs:
       - name: Checking out!
         uses: actions/checkout@v3
         with:
-          ref: ruchika-jain/patch1
+          ref: '73a2f79'
   
       # The ORAS cli, possibly will be baked in runner-vm and this step will not be required
       - name: Install Oras
@@ -30,6 +30,6 @@ jobs:
       - name: Running action   
         uses: ruchika-jain/package-action@1.0.1
         with:
-          package-name: 'hello-js-branch'
+          package-name: 'hello-js-commit'
         id: publish-action
         
