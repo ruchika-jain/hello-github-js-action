@@ -15,7 +15,7 @@ jobs:
       - name: Checking out!
         uses: actions/checkout@v3
         # with:
-        #   ref: '73a2f79'
+        #   ref: 'Give optional branch name/SHA/tag to checkout' 
   
       # The ORAS cli, possibly will be baked in runner-vm and this step will not be required
       - name: Install Oras
