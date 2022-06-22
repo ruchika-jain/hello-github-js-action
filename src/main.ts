@@ -8,8 +8,6 @@ async function run(): Promise<void> {
     core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
     console.log("Wohoo!!Action executed successfully!");
 
-    console.log("Second commit in main!")
-
     core.debug(new Date().toTimeString())
     await wait(parseInt(ms, 10))
     core.debug(new Date().toTimeString())
