@@ -14,8 +14,8 @@ jobs:
     steps:
       - name: Checking out!
         uses: actions/checkout@v3
-        with:
-          ref: '73a2f79'
+        # with:
+        #   ref: '73a2f79'
   
       # The ORAS cli, possibly will be baked in runner-vm and this step will not be required
       - name: Install Oras
