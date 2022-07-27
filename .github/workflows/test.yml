@@ -28,7 +28,7 @@ jobs:
           echo "Oras installed!"
           
       - name: Running action   
-        uses: ruchika-jain/package-action@1.0.1
+        uses: ruchika-jain/package-action@1.0.3
         with:
           package-name: 'hello-js-commit'
         id: publish-action
