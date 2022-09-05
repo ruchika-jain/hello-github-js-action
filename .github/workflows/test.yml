@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Running action
-        uses: actions-on-packages/package-action@ac9c8e9a8bca92b7228a635405ea28cc6f2f6b68
+        uses: actions-on-packages/package-action@ruchika-jain/add-path-input
         with:
           semver: '0.2.0'
         
