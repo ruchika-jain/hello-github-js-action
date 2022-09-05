@@ -1,35 +1,27 @@
-name: 'package-action'
+name: 'build-test'
 on: # rebuild any PRs and main branch changes
   pull_request:
-#   push:
-#     branches:
-#       - main
-#       - 'releases/*'
+  push:
+    branches:
+      - main
+      - 'releases/*'
   workflow_dispatch:
-  release: 
 
 jobs:
+  build: # make sure build/ci work properly
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          npm install
+      - run: |
+          npm run all
   test: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest
     steps:
-      - name: Checking out!
-        uses: actions/checkout@v3
-        # with:
-        #   ref: 'Give optional branch name/SHA/tag to checkout' 
-  
-      # The ORAS cli, possibly will be baked in runner-vm and this step will not be required
-      - name: Install Oras
-        run: |
-          curl -LO https://github.com/oras-project/oras/releases/download/v0.12.0/oras_0.12.0_linux_amd64.tar.gz
-          mkdir -p oras-install/
-          tar -zxf oras_0.12.0_*.tar.gz -C oras-install/
-          mv oras-install/oras /usr/local/bin/
-          rm -rf oras_0.12.0_*.tar.gz oras-install/
-          echo "Oras installed!"
-          
-      - name: Running action   
-        uses: ruchika-jain/package-action@1.0.1
+      - uses: actions/checkout@v3
+      - name: Running action
+        uses: actions-on-packages/package-action@ruchika-jain/add-path-input
         with:
-          package-name: 'hello-js-commit'
-        id: publish-action
+          semver: '0.1.0'
         
