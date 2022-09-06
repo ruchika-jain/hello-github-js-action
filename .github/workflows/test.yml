@@ -24,6 +24,6 @@ jobs:
       - name: Running action
 #         uses: actions-on-packages/package-action@ruchika-jain/add-path-input
         uses: actions-on-packages/package-action@test-action
-        with:
-          semver: '0.3.0'
+#         with:
+#           semver: '0.3.0'
         
