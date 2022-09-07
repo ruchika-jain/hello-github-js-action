@@ -25,6 +25,6 @@ jobs:
 #         uses: actions-on-packages/package-action@ruchika-jain/add-path-input
         uses: actions-on-packages/package-action@test-action
         with:
-          path: 'srcyy/'
+          path: 'src/'
 
         
